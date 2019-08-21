@@ -1,0 +1,177 @@
+{
+  "basics": {
+    "name": "Jonny Miller",
+    "label": "Software Developer",
+    "picture": "profile-sq.png",
+    "email": "jonnymiller@gmail.com",
+    "summary": "Results-driven full-stack developer with 19 years experience in all aspects of software development.  Strong problem solving skills and excellent at troubleshooting issues. Expertise in writing robust, testable code with an emphasis on readability.",
+    "location": {
+      "city": "Moncton",
+      "countryCode": "Canada",
+      "region": "New Brunswick"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "jonny-miller-0b729220",
+        "url": "https://www.linkedin.com/in/jonny-miller-0b729220/"
+      },
+      {
+        "network": "GitHub",
+        "username": "jonny-miller",
+        "url": "https://github.com/jonny-miller"
+      }
+    ]
+  },
+  "work": [
+    {
+        "company": "Akiri",
+        "position": "Senior Software Engineer",
+        "website": "https://akiri.com",
+        "startDate": "2017-11-20",
+        "summary": "Full-stack developer on a cloud-based product for handling healthcare data exchange over a secure private network.",
+        "highlights": [
+            "Responsibilities included design, prototyping, testing and implementation for all areas of the product.",
+            "Built initial UI for managing the cloud-based provider network with the VueJS framework.",
+            "Developed an engine for filtering data from healthcare protocols (FHIR/HL7) based on data exchange policies.",
+            "Developed APIs and backend services for managing provider resources in the cloud.",
+            "Mentored junior developers by reviewing pull requests and providing code feedback.",
+            "Technologies used include Kotlin, Kubernetes, Docker, Terraform, InfluxDB, Grafana, Vertx, jOOQ and PostgreSQL."
+        ]
+    },
+    {
+        "company": "Dell EMC",
+        "position": "Consultant Software Engineer",
+        "website": "https://www.dellemc.com/en-us/index.htm",
+        "startDate": "2016-01-01",
+        "endDate": "2017-11-20",
+        "summary": "Developer on a real-time analytics platform codenamed Nautilus, combining Apache Flink for analytics with Pravega for streaming storage.",
+        "highlights": [
+            "Coordinated and performed the initial release of Pravega to MavenCentral and DockerHub",
+            "Created the overall build system for packaging Nautilus.",
+            "Created the installer for Nautilus using docker and ansible playbooks.",
+            "Built automated tooling for analyzing open source dependencies to prevent the inclusion of unfavorably licensed libraries.",
+            "Mentored junior developers by reviewing pull requests and providing code feedback."
+        ]
+    },
+    {
+      "company": "EMC Corporation",
+      "position": "Principal Software Engineer",
+      "website": "https://www.dellemc.com/en-us/index.htm",
+      "startDate": "2013-01-01",
+      "endDate": "2016-01-01",
+      "summary": "Developer on two different products, EMC VxRack Neutrino and EMC ViPR.  EMC VxRack Neutrino was a turnkey private cloud product built on OpenStack that combines compute, storage and network into a single package.  EMC ViPR was a software defined storage product that automated provisioning storage out of available pools and mounting the storage to host systems.",
+      "highlights": [
+          "Designed and implemented an AngularJS user-interface for Neutrino.",
+          "Assisted in developing the platform responsible for deploying OpenStack in docker for Neutrino using ansible playbooks.",
+          "Coordinated build/packaging/release process for Neutrino, pulling together various pieces into a final installable product.",
+          "Wrote a web-based installer for Neutrino using AngularJS.",
+          "Integrated the Storage Automator service catalog user-interface into ViPR.",
+          "Updated the build system for ViPR, migrating from an ant build to a gradle build, and developed many gradle plugins for use within the build.",
+          "Key contributor in migrating the entire ViPR codebase from Subversion to Git."
+      ]
+  },
+  {
+        "company": "iWave Software, LLC",
+        "position": "Senior Developer",
+        "website": "",
+        "startDate": "2011-09-01",
+        "endDate": "2013-01-01",
+        "summary": "Developer working on the iWave Storage Automator product.  Storage Automator was a self-service catalog for provisioning and mounting storage from a variety of storage arrays.",
+        "highlights": [
+            "Developed Java wrappers for provisioning and mapping storage from VNX, VMAX and NetApp storage arrays.",
+            "Developed the user-interface for Storage Automator using the Play framework, Javascript and CSS."
+        ]
+    },
+    {
+        "company": "Vinvox",
+        "position": "Software Developer",
+        "website": "",
+        "startDate": "2011-03-01",
+        "endDate": "2011-09-01",
+        "summary": "Worked on a Flex user-interface for the management of automotive technicians by service managers.",
+        "highlights": [
+            "Updated the build system for the Flex frontend and Groovy backend."
+        ]
+    },
+    {
+        "company": "Mariner Partners",
+        "position": "IT Consultant",
+        "website": "https://marinerpartners.com/",
+        "startDate": "2010-05-01",
+        "endDate": "2011-03-01",
+        "summary": "Consultant at Medavie/Blue Cross, building an online medical claim system for Canadian Immigration and Customs (CIC) using Java Server Faces/ICE Faces.",
+        "highlights": [
+            "Contributed in the  the final push to complete the first phase of the CIC project on time."
+        ]
+    },
+    {
+        "company": "Whitehill Technologies, Skywire Software, Oracle",
+        "position": "Senior Developer",
+        "website": "",
+        "startDate": "2001-05-01",
+        "endDate": "2010-05-01",
+        "summary": "Software developer on a Java-based business process integration engine (Whitehill One).",
+        "highlights": [
+            "Developed the Java Swing user interface for Whitehill One.",
+            "Designed and implemented a new wizard framework for Whitehill One to provide a more consistent user experience.",
+            "Developed and maintained the build system for Whitehill One using Ant and Maven."
+        ]
+    }
+  ],
+  "education": [{
+    "institution": "Mount Allison University",
+    "area": "Computer Science",
+    "studyType": "Bachelor",
+    "startDate": "1996-09-01",
+    "endDate": "2001-05-01",
+    "courses": [
+      "Minor in Mathematics"
+    ]
+  }],
+  "skills": [
+    {
+      "name": "Programming",
+      "level": "",
+      "keywords": [
+          "Kotlin",
+          "Java",
+          "Python",
+          "Groovy",
+          "JavaScript",
+          "Bash",
+          "SQL"
+      ]
+    },
+    {
+      "name": "Build",
+      "level": "",
+      "keywords": [
+          "Gradle",
+          "Maven",
+          "Ant",
+          "Jenkins"
+      ]
+    },
+    {
+      "name": "Developer Tools",
+      "level": "",
+      "keywords": [
+          "GitHub",
+          "Stash",
+          "JIRA",
+          "Trello",
+          "Docker"
+      ]
+    },
+    {
+      "name": "Operating Systems",
+      "level": "",
+      "keywords": [
+          "Linux",
+          "MacOS",
+          "Windows"
+      ]
+    }
+  ]
+}
