@@ -4,10 +4,10 @@
     "label": "Software Developer",
     "picture": "profile-sq.png",
     "email": "jonnymiller@gmail.com",
-    "summary": "Results-driven full-stack developer with 19 years experience in all aspects of software development.  Strong problem solving skills and excellent at troubleshooting issues. Expertise in writing robust, testable code with an emphasis on readability.",
+    "summary": "Results-driven full-stack developer with 19+ years experience in all aspects of software development. Expertise in writing robust, testable code with an emphasis on readability.  Designed numerous software systems from data processing, build pipelines, and backend services.  Extensive experience refactoring software to increase testing and lowering maintenance costs.  I'm looking for highly motivated team where I can contribute to the team's success.",
     "location": {
       "city": "Moncton",
-      "countryCode": "Canada",
+      "countryCode": "CA",
       "region": "New Brunswick"
     },
     "profiles": [
@@ -47,10 +47,10 @@
         "endDate": "2017-11-20",
         "summary": "Developer on a real-time analytics platform codenamed Nautilus, combining Apache Flink for analytics with Pravega for streaming storage.",
         "highlights": [
-            "Coordinated and performed the initial release of Pravega to MavenCentral and DockerHub",
             "Created the overall build system for packaging Nautilus.",
             "Created the installer for Nautilus using docker and ansible playbooks.",
             "Built automated tooling for analyzing open source dependencies to prevent the inclusion of unfavorably licensed libraries.",
+            "Coordinated and performed the initial release of Pravega to MavenCentral and DockerHub",
             "Mentored junior developers by reviewing pull requests and providing code feedback."
         ]
     },
@@ -106,7 +106,7 @@
         ]
     },
     {
-        "company": "Whitehill Technologies, Skywire Software, Oracle",
+        "company": "Whitehill Technologies/Skywire/Oracle",
         "position": "Senior Developer",
         "website": "",
         "startDate": "2001-05-01",
