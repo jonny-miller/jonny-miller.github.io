@@ -39,7 +39,7 @@
             "Developed APIs and backend services for managing provider resources in the cloud.",
             "Implemented audit logging capabilities for backend services to track all changes to provider resources.",
             "Mentored junior developers by reviewing pull requests and providing code feedback.",
-            "Technologies used include Kotlin, Kubernetes, Docker, Terraform, AWS, InfluxDB, Grafana, Vert.x, jOOQ and PostgreSQL."
+            "Technologies used include Kotlin, Python, Kubernetes, Docker, Terraform, AWS, InfluxDB, Grafana, Vert.x, jOOQ and PostgreSQL."
         ]
     },
     {
@@ -152,24 +152,12 @@
       "name": "Web Technologies",
       "level": "",
       "keywords": [
-        "REST",
-        "JSON",
         "HTML",
         "CSS",
         "Vert.x",
         "Spring",
         "VueJS",
         "AngularJS"
-      ]
-    },
-    {
-      "name": "Build",
-      "level": "",
-      "keywords": [
-          "Gradle",
-          "Maven",
-          "Ant",
-          "Jenkins"
       ]
     },
     {
@@ -181,6 +169,16 @@
           "JIRA",
           "Trello",
           "Artifactory"
+      ]
+    },
+    {
+      "name": "Build",
+      "level": "",
+      "keywords": [
+          "Gradle",
+          "Maven",
+          "Ant",
+          "Jenkins"
       ]
     },
     {
