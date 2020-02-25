@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+	  <title>{{ resume.basics.name }} - {{ resume.basics.label }}</title>
+
+	  <link rel="stylesheet"
+	        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		      crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+	</head>
+	<body>
+  	<div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 left-pane">
+          {% include "sidebar.j2" %}
+        </div>
+        <div class="col-sm-8 right-pane">
+          {% include "content.j2" %}
+        </div>
+      </div>
+    </div>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<div id="experience">
+  {% for work in resume.work %}
+    <div class="experience">
+      <div class="experience-header">
+        <div class="time">
+          <time datetime="{{ work.startDate }}">{{ work.startDate | formatDate }}</time>&nbsp;—&nbsp;
+          {%- if work.endDate -%}
+              <time datetime="{{ work.endDate }}">{{ work.endDate | formatDate }}</time>
+          {%- else -%}
+              <time>Now</time>
+          {%- endif %}
+        </div>
+        <h4>{{ work.company }}</h4>
+
+        <div class="website">{{ work.website }}</div>
+        <h5>{{ work.position }}</h5>
+      </div>
+
+      <div class="experience-content">
+        <div class="summary">{{ work.summary }}</div>
+        <div class="detail">
+          <ul>
+            {% for highlight in work.highlights %}
+              <li>{{ highlight }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

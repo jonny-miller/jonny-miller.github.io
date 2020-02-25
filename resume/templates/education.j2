@@ -1,0 +1,30 @@
+<div id="education">
+  {% for education in resume.education %}
+    <div class="education">
+      <div class="education-header">
+        <div class="time">
+          <time datetime="{{ education.startDate }}">{{ education.startDate | formatDate }}</time>&nbsp;—&nbsp;
+          {%- if education.endDate -%}
+              <time datetime="{{ education.endDate }}">{{ education.endDate | formatDate }}</time>
+          {%- else -%}
+              <time>Now</time>
+          {%- endif %}
+        </div>
+        <h4>{{ education.institution }}</h4>
+        <h5>{{ education.area }}</h5>
+      </div>
+      <div class="education-content">
+        <div class="summary">{{ education.studyType }}</div>
+        <div class="detail">
+          {% if education.courses %}
+            <ul>
+              {% for course in education.courses %}
+                <li>{{ course }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

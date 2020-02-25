@@ -1,0 +1,146 @@
+
+body {
+  color: #444;
+  font-weight: 200;
+}
+h1, h2, h3, h4, h5 {
+  color: #333;
+}
+h1, h2 {
+  font-weight: 400;
+}
+h3, h4, h5 {
+  font-weight: 400;
+}
+strong {
+  font-weight: 600;
+}
+
+@page {
+  margin-top: 2cm;
+  margin-bottom: 2cm;
+}
+.experience {
+  page-break-inside: avoid;
+}
+.education {
+  page-break-inside: avoid;
+}
+
+.right-pane {
+  padding-left: 40px;
+  /* sborder-left: 1px solid #ddd; */
+}
+.sidebar h1 {
+  font-size: 1.8em;
+}
+.sidebar h2 {
+  font-size: 1.6em;
+}
+
+.content h4 {
+  font-size: 1.25em;
+  font-weight: 400;
+}
+.content h5 {
+  font-size: 1.1em;
+  font-weight: 350;
+}
+
+.contact {
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+.contact-item {
+  padding-bottom: 0.5em;
+}
+.contact-item .contact-icon {
+  float: left;
+  width: 40px;
+}
+.contact-item .contact-content {
+  margin-left: 40px;
+}
+
+.profile-username {
+  display: block;
+  opacity: 0.7;
+  font-size: 0.8em;
+}
+.profile-url {
+  display: none;
+}
+
+.list-item {
+  padding-bottom: 1em;
+}
+.list-title {
+  font-weight: 600;
+  padding-bottom: 0.25em;
+}
+.list-item + .list-item {
+  border-top: 1px solid #ddd;
+  padding-top: 1em;
+}
+
+#interests {
+  page-break-before: always;
+}
+
+.section .section-icon {
+  float: left;
+  width: 40px;
+}
+.section .section-title,
+.section .section-content {
+  margin-left: 40px;
+}
+.section .section-icon,
+.section .section-title {
+  font-size: 24px;
+  line-height: 1.2;
+}
+.section + .section {
+  padding-top: 2em;
+}
+.section .section-title {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.experience-header .time,
+.experience-header .website,
+.education-header .time {
+  float: right;
+  width: 300px;
+  text-align: right;
+}
+.experience-header h4,
+.experience-header h5,
+.education-header h4 {
+  margin-right: 300px;
+}
+
+.experience {
+  padding-bottom: 1em;
+}
+.experience + .experience {
+  border-top: 1px solid #ddd;
+  padding-top: 1em;
+}
+
+.time, .website {
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+.time {
+  padding-top: 5px;
+}
+
+.summary {
+  padding-bottom: 0.5em;
+}
+
+.detail ul {
+  padding-top: 0.5em;
+}

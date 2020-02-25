@@ -9,7 +9,7 @@
     "location": {
       "city": "Moncton",
       "countryCode": "Canada",
-      "region": "New Brunswick"
+      "region": "NB"
     },
     "profiles": [
       {
@@ -46,7 +46,7 @@
     {
         "company": "Dell EMC",
         "position": "Consultant Software Engineer",
-        "website": "https://www.dellemc.com/en-us/index.htm",
+        "website": "https://www.dellemc.com/",
         "startDate": "2016-01-01",
         "endDate": "2017-11-20",
         "summary": "Developer on a real-time analytics platform codenamed Nautilus, combining Apache Flink for analytics with Pravega for streaming storage.",
@@ -61,7 +61,7 @@
     {
       "company": "EMC Corporation",
       "position": "Principal Software Engineer",
-      "website": "https://www.dellemc.com/en-us/index.htm",
+      "website": "https://www.dellemc.com/",
       "startDate": "2013-01-01",
       "endDate": "2016-01-01",
       "summary": "Developer on two different products, EMC VxRack Neutrino and EMC ViPR.  EMC VxRack Neutrino was a turnkey private cloud product built on OpenStack that combines compute, storage and network into a single package.  EMC ViPR was a software defined storage product that automated provisioning storage out of available pools and mounting the storage to host systems.",
@@ -153,9 +153,12 @@
       "name": "Web Technologies",
       "level": "",
       "keywords": [
+        "JSON",
+        "REST",
         "HTML",
         "CSS",
         "Vert.x",
+        "Dropwizard",
         "Spring",
         "VueJS",
         "AngularJS"
@@ -199,6 +202,26 @@
           "Linux",
           "MacOS",
           "Windows"
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Hobbies",
+      "level": "",
+      "keywords": [
+        "Woodworking",
+        "Luthiery",
+        "Cooking"
+      ]
+    },
+    {
+      "name": "Sports",
+      "level": "",
+      "keywords": [
+        "Rugby",
+        "Football",
+        "Soccer"
       ]
     }
   ]
