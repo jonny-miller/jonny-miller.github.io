@@ -204,25 +204,5 @@
           "Windows"
       ]
     }
-  ],
-  "interests": [
-    {
-      "name": "Hobbies",
-      "level": "",
-      "keywords": [
-        "Woodworking",
-        "Luthiery",
-        "Cooking"
-      ]
-    },
-    {
-      "name": "Sports",
-      "level": "",
-      "keywords": [
-        "Rugby",
-        "Football",
-        "Soccer"
-      ]
-    }
   ]
 }
