@@ -1,9 +1,17 @@
 <div class="content">
-  <section class="section">
+  <section class="section keep-together">
     <div class="section-icon"><i class="fas fa-info-circle"></i></div>
     <h3 class="section-title">About</h3>
     <div class="section-content">
-      {{ resume.basics.summary }}
+      <p>{{ resume.basics.summary }}</p>
+    </div>
+  </section>
+
+  <section class="section keep-together">
+    <div class="section-icon"><i class="fas fa-users"></i></div>
+    <h3 class="section-title">Profiles</h3>
+    <div class="section-content">
+      {% include "profiles.j2" %}
     </div>
   </section>
 
@@ -15,11 +23,19 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section keep-together">
     <div class="section-icon"><i class="fas fa-graduation-cap"></i></div>
     <h3 class="section-title">Education</h3>
     <div class="section-content">
       {% include "education.j2" %}
+    </div>
+  <section>
+
+  <section class="section keep-together">
+    <div class="section-icon"><i class="fas fa-tools"></i></div>
+    <h3 class="section-title">Skills</h3>
+    <div class="section-content">
+      {% include "skills.j2" %}
     </div>
   <section>
 </div>

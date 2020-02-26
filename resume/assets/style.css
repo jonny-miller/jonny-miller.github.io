@@ -1,41 +1,63 @@
 
 body {
   color: #444;
-  font-weight: 200;
+  font-weight: 300;
+  font-family: 'Lato', ;
+  font-size: 15px;
+  line-height: 1.6;
 }
+
 h1, h2, h3, h4, h5 {
   color: #333;
 }
-h1, h2 {
+h1 {
+  font-weight: 500;
+}
+h2 {
   font-weight: 400;
 }
 h3, h4, h5 {
-  font-weight: 400;
-}
-strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @page {
+  size: Letter;
   margin-top: 2cm;
   margin-bottom: 2cm;
 }
-.experience {
-  page-break-inside: avoid;
-}
-.education {
+.keep-together {
   page-break-inside: avoid;
 }
 
-.right-pane {
-  padding-left: 40px;
-  /* sborder-left: 1px solid #ddd; */
+.experience {
+  page-break-inside: avoid;
 }
-.sidebar h1 {
-  font-size: 1.8em;
+#education,
+.education {
+  page-break-inside: avoid;
 }
-.sidebar h2 {
-  font-size: 1.6em;
+.section {
+  padding-top: 1em;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #ddd; /* Change the color */
+  /* font-weight: bold; *//*If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+/* ul {
+  list-style: none;
+} */
+ul li {
+  padding-bottom: 0.25em;
 }
 
 .content h4 {
@@ -47,10 +69,22 @@ strong {
   font-weight: 350;
 }
 
-.contact {
-  padding-top: 1em;
-  padding-bottom: 2em;
+.wrapper {
+  padding-right: 40px;
 }
+
+.header .contact {
+  float: right;
+  width: 220px;
+}
+.header .name {
+  margin-right: 220px;
+  padding-left: 40px;
+}
+.header {
+  padding-bottom: 2.5em;
+}
+
 .contact-item {
   padding-bottom: 0.5em;
 }
@@ -63,12 +97,13 @@ strong {
 }
 
 .profile-username {
-  display: block;
-  opacity: 0.7;
-  font-size: 0.8em;
+  display: none;
+  font-size: 0.9em;
 }
 .profile-url {
-  display: none;
+  /* display: none; */
+  display: block;
+  font-size: 0.9em;
 }
 
 .list-item {
@@ -77,10 +112,6 @@ strong {
 .list-title {
   font-weight: 600;
   padding-bottom: 0.25em;
-}
-.list-item + .list-item {
-  border-top: 1px solid #ddd;
-  padding-top: 1em;
 }
 
 #interests {
@@ -130,7 +161,6 @@ strong {
 }
 
 .time, .website {
-  opacity: 0.7;
   font-size: 0.9em;
 }
 .time {
@@ -138,7 +168,8 @@ strong {
 }
 
 .summary {
-  padding-bottom: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
 }
 
 .detail ul {

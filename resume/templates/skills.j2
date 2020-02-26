@@ -1,0 +1,15 @@
+<div class="skills row">
+  {% for item in resume.skills %}
+    <div class="col-sm-4 list-item">
+      <div class="list-title">{{ item.name }}</div>
+      <div class="list-content">
+        {# {{ item.keywords | join(", ") }} #}
+        <ul>
+        {% for value in item.keywords %}
+          <li>{{value}}</li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endfor %}
+</div>

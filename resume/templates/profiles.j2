@@ -1,0 +1,10 @@
+{% for profile in resume.basics.profiles %}
+  <div class="contact-item">
+    <div class="contact-icon"><i class="fab fa-{{ profile.network | lower }}"></i></div>
+    <div class="contact-content">
+      <span class="profile-network">{{ profile.network }}</span>
+      <span class="profile-username">{{ profile.username }}</span>
+      <span class="profile-url">{{ profile.url }}</span>
+    </div>
+  </div>
+{% endfor %}
