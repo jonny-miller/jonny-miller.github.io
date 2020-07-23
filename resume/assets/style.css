@@ -96,14 +96,23 @@ ul li {
   margin-left: 40px;
 }
 
-.profile-username {
-  display: none;
-  font-size: 0.9em;
+@media only screen {
+  .profile-username {
+    display: block;
+    font-size: 0.9em;
+  }
+  .profile-url {
+    display: none;
+  }
 }
-.profile-url {
-  /* display: none; */
-  display: block;
-  font-size: 0.9em;
+@media only print {
+  .profile-username {
+    display: none;
+  }
+  .profile-url {
+    display: block;
+    font-size: 0.9em;
+  }
 }
 
 .list-item {
