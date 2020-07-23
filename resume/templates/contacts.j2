@@ -1,11 +1,11 @@
 <div class="contact">
   <div class="contact-item">
     <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-    <div class="contact-content">{{ resume.basics.email }}</div>
+    <div class="contact-content">{{ resume.basics.email | scramble }}</div>
   </div>
   <div class="contact-item">
     <div class="contact-icon"><i class="fas fa-phone"></i></div>
-    <div class="contact-content">{{ resume.basics.phone }}</div>
+    <div class="contact-content">{{ resume.basics.phone | scramble }}</div>
   </div>
   <div class="contact-item">
     <div class="contact-icon"><i class="fas fa-location-arrow"></i></div>

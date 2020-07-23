@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import argparse
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 import yaml
 import os
@@ -18,18 +19,23 @@ def format_date(value, format="%b %Y"):
     date = datetime.strptime(value, "%Y-%m-%d")
     return datetime.strftime(date, format)
 
+def scramble(value, chunk_size=2):
+    chunks = [value[i:i+chunk_size] for i in range(0, len(value), chunk_size)]
+    return "<span style=\"display:none\">1337</span>".join(chunks)
+
 env = Environment(
     loader=FileSystemLoader(TEMPLATE_DIR),
     autoescape=select_autoescape(["html"])
 )
 env.filters['formatDate'] = format_date
+env.filters['scramble'] = scramble
 
 
-def render_resume():
+def render_resume(assets_prefix=""):
     with open("resume.json") as f:
         resume = yaml.safe_load(f)
     template = env.get_template("resume.j2")
-    return template.render(resume=resume)
+    return template.render(resume=resume, assets_prefix=assets_prefix)
 
 class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
@@ -56,6 +62,17 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(content.encode("UTF-8", "replace"))
 
-with socketserver.TCPServer(("", PORT), CustomHTTPRequestHandler) as httpd:
-    print(f"Serving at port {PORT}")
-    httpd.serve_forever()
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--generate", action="store_true")
+
+args = parser.parse_args()
+if args.generate:
+    print("Generating Resume")
+    resume = render_resume("assets/")
+    with open("index.html", "w") as f:
+        f.write(resume)
+else:
+    with socketserver.TCPServer(("", PORT), CustomHTTPRequestHandler) as httpd:
+        print(f"Serving at port {PORT}")
+        httpd.serve_forever()
