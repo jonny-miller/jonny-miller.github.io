@@ -22,8 +22,8 @@ h3, h4, h5 {
 
 @page {
   size: Letter;
-  margin-top: 2cm;
-  margin-bottom: 2cm;
+  margin-top: 1.75cm;
+  margin-bottom: 1.75cm;
 }
 .keep-together {
   page-break-inside: avoid;
