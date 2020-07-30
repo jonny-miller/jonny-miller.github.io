@@ -1,0 +1,11 @@
+position: Position name
+company:
+    - Company Name
+    - Address 1
+    - Address 2
+to: To Whom It May Concern
+content:
+    - >
+      Paragraph 1
+    - >
+      Paragraph 2

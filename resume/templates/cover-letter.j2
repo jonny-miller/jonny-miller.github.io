@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+	  <title>{{ resume.basics.name }}</title>
+    <meta name="author" content="{{ resume.basics.name }}">
+    <meta name="description" content="{{ resume.basics.summary | truncate(120) }}">
+
+	  <link rel="stylesheet"
+	        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		      crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ assets_prefix }}style.css">
+    <link rel="stylesheet" href="{{ assets_prefix }}fontawesome-free/css/all.min.css">
+	</head>
+	<body>
+  	<div class="container">
+    <div class="wrapper">
+      <div class="header">
+        {% include "contacts.j2" %}
+        <div style="clear: both;"></div>
+      </div>
+      <div class="content">
+        <p>{{ today | formatDate("%B %d, %Y") }}</p>
+
+        <p>
+        {% for line in letter.company %}
+          {{ line }} <br />
+        {% endfor %}
+        </p>
+
+        <p>{{ letter.to }}:</p>
+      {% for paragraph in letter.content %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+
+        <p>Sincerely,</p>
+        <p>{{ resume.basics.name }}</p>
+      </div>
+    </div>
+	</body>
+</html>

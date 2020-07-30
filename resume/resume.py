@@ -37,6 +37,19 @@ def render_resume(assets_prefix=""):
     template = env.get_template("resume.j2")
     return template.render(resume=resume, assets_prefix=assets_prefix)
 
+def render_cover_letter(assets_prefix=""):
+    if not os.path.exists("cover-letter.yaml"):
+        return None
+
+    with open("resume.json") as f:
+        resume = yaml.safe_load(f)
+    with open("cover-letter.yaml") as f:
+        cover_letter = yaml.safe_load(f)
+
+    template = env.get_template("cover-letter.j2")
+    today = datetime.strftime(datetime.now(), "%Y-%m-%d")
+    return template.render(letter=cover_letter, today=today, resume=resume, assets_prefix=assets_prefix)
+
 class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=STATIC_DIR, **kwargs)
@@ -45,12 +58,20 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         # Serve the resume when the root is accessed, otherwise fallback on the default behaviour
         if self.path == "/":
             self._serve_resume()
+        elif self.path == "/cover-letter":
+            self._serve_cover_letter()
         else:
             super().do_GET()
 
     def _serve_resume(self):
+        self._serve_content(render_resume)
+
+    def _serve_cover_letter(self):
+        self._serve_content(render_cover_letter)
+
+    def _serve_content(self, render):
         try:
-            content = render_resume()
+            content = render()
             self.send_response(HTTPStatus.OK)
         except Exception:
             error = traceback.format_exc()
@@ -63,6 +84,7 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(content.encode("UTF-8", "replace"))
 
 
+
 parser = argparse.ArgumentParser()
 parser.add_argument("--generate", action="store_true")
 
@@ -72,6 +94,12 @@ if args.generate:
     resume = render_resume("assets/")
     with open("index.html", "w") as f:
         f.write(resume)
+
+    letter = render_cover_letter("assets/")
+    if letter:
+        with open("cover-letter.html", "w") as f:
+            f.write(letter)
+
 else:
     with socketserver.TCPServer(("", PORT), CustomHTTPRequestHandler) as httpd:
         print(f"Serving at port {PORT}")
